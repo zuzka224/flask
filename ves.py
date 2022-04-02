@@ -1,5 +1,6 @@
 #-----------overenie ci subor existuje-------------
 
+from gettext import install
 import os.path
 #subor = input("Zadaj názov súboru: ")
 
