@@ -3,7 +3,10 @@
 import string
 import random
 from gettext import install
-import os.path
+
+
+
+
 #subor = input("Zadaj názov súboru: ")
 
 #if os.path.isfile(subor):
@@ -231,10 +234,12 @@ def convert_point(width, height, output_width, output_height, X):
 #------------citanie suboru----------------
 
  
-def citanie_suboru(subor, im):
+def render_ves(subor, im):
   
-  
-  with open(str(subor), "r") as f:
+  with open("ves.txt", "w") as f:
+    f.write(subor)
+
+  with open("ves.txt", "r") as f:
     prikazy = ["CLEAR", "CIRCLE", "FILL_CIRCLE", "TRIANGLE", "LINE", "FILL_TRIANGLE", "RECT", "FILL_RECT"]
 
 
@@ -257,31 +262,15 @@ def citanie_suboru(subor, im):
         if pozicia[0] == "VES":
 
           #-------------------------------konvertovanie-----------------------------
-          width= int(pozicia[2])
-          height = int(pozicia[3])
-          zmena = input(f"Chceš zmeniť veľkosť obrázka? aktuálna veľkosť je {pozicia[2]}:{pozicia[3]}. ZADAJ A/N ").upper()
-
-          if zmena == "A":
-            rozmery = input(f"Zadaj požadovanú veľkosť vo fomáte X:Y, zachovaj pomer {pozicia[2]}:{pozicia[3]}! ")
-            output_width, output_height = rozmery.split(":")
-            output_width = int(output_width)
-            output_height = int(output_height)
-          elif zmena == "N":
-            output_width= int(pozicia[2])
-            output_height = int(pozicia[3])
-            
-            
-          else:
-            output_width= int(pozicia[2])
-            output_height = int(pozicia[3])
+          width= 400
+          height = 1000
+          output_width = 400
+          output_height = 1000
+         
     
           
-          if zmena == "N": 
-           im = Image.new("RGB", (width, height), (255, 255, 255)) 
-          elif zmena == "A":
-           im = Image.new("RGB", (output_width, output_height),  (255, 255, 255)) 
-          else:
-           im = Image.new("RGB", (width, height), (255, 255, 255)) 
+        
+          im = Image.new("RGB", (width, height), (255, 255, 255)) 
           
 
 
