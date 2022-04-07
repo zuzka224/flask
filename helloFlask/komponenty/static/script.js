@@ -12,10 +12,15 @@ function handleSubmit(e) {
 
 	const url = this.action; // Nacitame povodnu URL zadanu vo formulari
 	const method = this.method; // NAcitame povodnu metodu zadanu vo formulari
-	fetch(url, {method: method, body: formular}) // Urobíme HTTP požiadavku na náš server POST /render a formularom v tele požiadavky 
+	fetch(url, { method: method, body: formular }) // Urobíme HTTP požiadavku na náš server POST /render a formularom v tele požiadavky 
 		.then((res) => res.blob()) // Dostali sme binárne dáta (blob)
 		.then((image) => {
 			document.querySelector("#output").src = URL.createObjectURL(image); // Nastavíme src našeho <img> na načítaný obrázok
 		})
 }
 document.querySelector("form").addEventListener("submit", handleSubmit); // Nastavíme formulár, aby pri submit udalosti spustil našu handleSubmit funkciu
+
+
+
+
+

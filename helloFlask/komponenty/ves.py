@@ -262,10 +262,10 @@ def render_ves(subor, im):
         if pozicia[0] == "VES":
 
           #-------------------------------konvertovanie-----------------------------
-          width= 400
-          height = 1000
-          output_width = 400
-          output_height = 1000
+          width= 800
+          height = 800
+          output_width = 800
+          output_height = 800
          
     
           
@@ -318,6 +318,3 @@ def random_farba():
     farba += znak
 
   return farba
-
-
-#nezabudnut IMG.SHOW()!!!

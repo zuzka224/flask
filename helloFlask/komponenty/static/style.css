@@ -47,7 +47,7 @@ body {
 
 section {
 	padding: 5em 2em;
-	
+
 }
 
 img {
@@ -131,26 +131,30 @@ button+.btn {
 
 }
 
-form_text{
+form_text {
 	padding: 3em;
 	text-align: left;
 }
+
 body {
 	display: flex;
 }
-body > section {
+
+body>section {
 	flex-basis: 50%;
 }
+
 textarea {
 	width: 25em;
 	height: 25em;
-	
+
 	line-height: 150%;
 	resize: vertical;
 	background-color: lightslategray;
-	
+
 
 }
+
 img {
 	width: 100%;
 	height: auto;

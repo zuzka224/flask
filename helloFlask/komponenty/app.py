@@ -16,7 +16,6 @@ def random_color():
   return (r, g, b)
 
 
-
 def serve_pil_image(img):
 	img_io = BytesIO()
 	img.save(img_io, 'JPEG', quality=70)
@@ -41,13 +40,15 @@ def render():
   """
     Tato funkcia dostane v HTTP poziadavke zdrojovy kod pre VES a pozadovanu sirku, vyrenderuje obrazok a vrati ho ako HTTP odpoved
   """
-  ves = request.form.get('ves')  # nacitanie hodnoty ktoru sme dostali v poziadavke
+  ves = request.form.get(
+      'ves')  # nacitanie hodnoty ktoru sme dostali v poziadavke
   # nacitanie hodnoty ktoru sme dostali v poziadavke
   width = request.form.get('width')
   print(ves)
   # img = render_ves(ves, width) # tu posleme VES riadky do funkcie render_ves z projektu z prvého polroka
   img = render_ves(ves, "img")
   return serve_pil_image(img)  # vratime vyrenderovany obrazok ako jpg
+
 
 @app.route('/')
 def home():
