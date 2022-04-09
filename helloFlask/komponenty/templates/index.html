@@ -5,20 +5,86 @@
 	<title>Vector Script GUI</title>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = "style.css")}}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-</head>
 
+
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			background-color: rgb(1, 0, 3);
+		}
+	
+		#particles.js {
+			width: 100%;
+			height: 100vh;
+			background-color: aqua;
+	
+	
+		}
+
+		#hlavne{
+			width: 100%;
+			height: 100vh;
+		}
+	
+		p {
+			color: white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			
+		}
+
+		a{
+			color: white;
+			position: absolute;
+			top: 80%;
+			left: 50%;
+			transform: translate(-50%, -80%);
+			text-decoration: none;
+		}
+		textarea{background-color: aliceblue;
+		
+		}
+	</style>
+
+	
+
+
+</head>
+	
 <body>
-	<header id="header">VECTOR SCRIPT GUI</header>
+
+<div id="particles-js">
+	<p class="text--glitch" data-text="VECTOR SCRIPT">
+		VECTOR SCRIPT
+	</p>
+
+	<a class="btn btn-white btn-mid" href="#hlavne">LET'S GO!</a>
+</div>
+
+<hr class="rounded">
+
+
+	<div class="hlavne" id="hlavne">
 	<section id="form_text">
 		<form method="POST" action="/render">
 			<textarea name="ves"></textarea>
 			<button class="btn">Zobraziť</button>
 		</form>
 	</section>
-	<section>
-		<img id="output"/>
+	<section class="output">
+		<img id="output" />
 	</section>
+	</div>
+
+
+
 	<script type="text/javascript" src="{{url_for('static', filename = "script.js")}}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename = "particles.js")}}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename = "app.js")}}"></script>
 </body>
 
 </html>

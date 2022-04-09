@@ -1,4 +1,4 @@
-// handleSubmit je funkcia, ktorá sa spustí keď sa bude mať odoslať náš formulár
+
 function handleSubmit(e) {
 	e.preventDefault(); // zabrániť vstavenému odosielaniu v prehliadači
 
@@ -19,8 +19,3 @@ function handleSubmit(e) {
 		})
 }
 document.querySelector("form").addEventListener("submit", handleSubmit); // Nastavíme formulár, aby pri submit udalosti spustil našu handleSubmit funkciu
-
-
-
-
-
