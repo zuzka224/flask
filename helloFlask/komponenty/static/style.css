@@ -8,7 +8,7 @@ html {
 /* aby to bolo na celu obrazovku */
 #particles.js {
 	width: 100%;
-	height: 100vh;
+	height: 110vh;
 	background-color: rgb(0, 0, 0);
 
 
@@ -44,6 +44,7 @@ textarea {
 	color: black;
 	width: 400px;
 	height: 600px;
+	left: 30%;
 }
 
 
@@ -62,6 +63,9 @@ textarea {
 .text--glitch {
 	
 	font-size: 3rem;
+	top: 40%;
+	left: 50%;
+	position: center;
 	font-weight: 700;
 	letter-spacing: .025em;
 	text-transform: uppercase;
@@ -70,7 +74,7 @@ textarea {
 		-.05em -.025em 0 rgba(0, 255, 0, .75),
 		.025em .05em 0 rgba(0, 0, 255, .75);
 
-	animation: glitch 525ms infinite;
+	animation: glitch 800ms infinite;
 }
 
 .text--glitch::before,
@@ -161,9 +165,9 @@ textarea {
 .btn-mid {
 	border-radius: 0px;
 	text-decoration: none;
-	padding: 14px 21px;
-	font-size: 28px;
-	line-height: 30px;
+	padding: 15px 20px;
+	font-size: 15px;
+	line-height: 20px;
 	text-transform: uppercase;
 	font-family: 'Times New Roman', serif;
 	font-weight: 800;
@@ -195,31 +199,32 @@ input[type="submit"]:hover {
 
 .btn-white:hover {
 	border: solid 2px #fff;
-	background: #fff;
-	color: #1f1f1f !important;
+	background: rgb(61, 61, 61);
+	color: #fffcfc !important;
 }
 
 /* oddelovacia ciara */
 hr.rounded {
-	border-top: 8px solid #bbb;
-	border-radius: 5px;
+	border-top: 8px solid rgb(96, 96, 96);
+	border-radius: 7px;
 }
 
 /* typewriter pismo */
 .typed {
 	display: inline;
-	color: rgb(255, 255, 255);
+	color: rgb(130, 130, 130);
 
 	font-size: 150%;
 	text-align: left;
-	font-family: "Times New Roman" serif;
+	text-transform: uppercase;
+	font-family: "Times New Roman", serif;
 	vertical-align: text-bottom;
 }
 
 .typed::after {
 	content: "|";
 	font-size: 150%;
-	animation: blink .75s step-end infinite;
+	animation: blink .60s step-end infinite;
 }
 
 @keyframes blink {
@@ -232,4 +237,49 @@ hr.rounded {
 	50% {
 		color: rgba(245, 245, 245)
 	}
+}
+
+
+/* ZOBRAZIŤ*/
+.click{
+	position: static;
+	top: 160%;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 20px;
+	text-align: center;
+	color: rgb(0, 0, 0);
+	padding: 15px 20px;
+	text-transform: uppercase;
+	background-color: rgb(202, 202, 202);
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.click {
+	border: solid 2px rgb(255, 255, 255);
+	background: transparent;
+	color: rgb(252, 248, 248) !important;
+}
+
+.click:hover {
+	border: solid 2px #fff;
+	background: rgb(138, 138, 138);
+	color: #fffcfc !important;
+}
+
+.output{
+    position:absolute;
+    top: 110%;
+    left: 55%;
+    border: 0px solid #ccc;
+
+}
+
+.form_text{
+	position: absolute;
+	left: 10%;
+	top: 110%;
 }
