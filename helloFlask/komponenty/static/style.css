@@ -3,41 +3,76 @@ html {
 	scroll-behavior: smooth;
 }
 
-* {
-	margin: 0;
-	padding: 0;
+#particles.js {
+	width: 100%;
+	height: 100vh;
+	background-color: aqua;
+
+
 }
 
+#hlavne {
+	width: 100%;
+	height: 100vh;
+}
 
-body>section {
-	flex-basis: 50%;
+.hlavne2{
+	display: grid;
+	grid-template-columns: 1fr,1fr;
+	grid-template-rows: 1fr, 10fr, 2fr;
+}
+
+p {
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+a {
+	color: white;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translate(-50%, -80%);
+	text-decoration: none;
 }
 
 textarea {
-	margin: 8%;
-	width: 80%;
-	height: 90vh;
-}
-
-img {
-	width: 80%;
-	height: auto;
-}
-
-
-.hlavne {display: grid;
-grid-template-columns: repeat(2, 1fr);
+	background-color: rgb(175, 175, 175);
+	color: black;
+	width: 40%;
+	
 
 
 }
-.form_text{
-	grid-column: auto;
+::selection {
+	color: rgb(0, 0, 0);
+	background: rgb(82, 82, 82);
+}
+
+
+
+
+.hlavne {
+	
+	background-color: #21f3b4;
+	padding: 10px;
+}
+
+
+.ves{
+	grid-column: 1;
 	padding-left: 10%;
-}
+	
+}   
 
 .output {
-	grid-column: auto;
+	grid-column: 2;
 	padding-right: 10%;
+	
 }
 
 
@@ -45,6 +80,7 @@ grid-template-columns: repeat(2, 1fr);
 *::before,
 *::after {
 	box-sizing: border-box;
+	background-color: black;
 }
 
 
@@ -193,3 +229,42 @@ hr.rounded {
 	border-top: 8px solid #bbb;
 	border-radius: 5px;
 }
+
+
+
+
+
+
+
+
+.typed {
+	display: inline;
+	color: rgb(255, 255, 255);
+
+	font-size: 150%;
+	text-align: left;
+	font-family: "Times New Roman" serif;
+	vertical-align: text-bottom;
+}
+
+.typed::after {
+	content: "|";
+	font-size: 150%;
+	animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+
+	from,
+	to {
+		color: transparent
+	}
+
+	50% {
+		color: rgba(245, 245, 245)
+	}
+}
+
+
+
+

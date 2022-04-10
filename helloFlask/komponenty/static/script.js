@@ -19,3 +19,24 @@ function handleSubmit(e) {
 		})
 }
 document.querySelector("form").addEventListener("submit", handleSubmit); // Nastavíme formulár, aby pri submit udalosti spustil našu handleSubmit funkciu
+
+
+
+let textLength = 0;
+let text = "Do textového poľa zadaj ves súbor s veľkosťou obrázka 600:400. Pre nový hárok stlač vymazať. "
+
+function type() {
+	let textChar = text.charAt(textLength++);
+	let paragraph = document.getElementById("typed");
+	let charElement = document.createTextNode(textChar);
+	paragraph.appendChild(charElement);
+	if (textLength < text.length + 1) {
+		setTimeout('type()', 50);
+	} else {
+		text = '';
+	}
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+	type();
+});
