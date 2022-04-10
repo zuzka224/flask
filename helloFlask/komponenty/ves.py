@@ -6,7 +6,6 @@ from gettext import install
 
 
 
-
 #subor = input("Zadaj názov súboru: ")
 
 #if os.path.isfile(subor):
@@ -213,8 +212,8 @@ def rect(im,ax, ay, width, height, thickness, color):
 
 #---------------unknown function--------------
 def unknown_function():
-  global cislo_riadku, pozicia
-  print(f"Syntax error on line {cislo_riadku}: Unknown comman {pozicia[0]}.")
+  global pozicia
+  
 
 
 
@@ -243,11 +242,7 @@ def render_ves(subor, im):
     prikazy = ["CLEAR", "CIRCLE", "FILL_CIRCLE", "TRIANGLE", "LINE", "FILL_TRIANGLE", "RECT", "FILL_RECT"]
 
 
-
-
-    cislo_riadku = 0
     for riadok in f:
-      cislo_riadku += 1
       riadok = riadok.strip()
       pozicia= riadok.split(" ")
       
@@ -262,16 +257,17 @@ def render_ves(subor, im):
         if pozicia[0] == "VES":
 
           #-------------------------------konvertovanie-----------------------------
-          width= 800
-          height = 800
-          output_width = 800
-          output_height = 800
+          width= 400
+          height = 600
+          output_width = 400
+          output_height = 600
          
     
           
         
           im = Image.new("RGB", (width, height), (255, 255, 255)) 
           
+
 
 
         elif pozicia[0] == "CLEAR":
@@ -305,10 +301,10 @@ def render_ves(subor, im):
         else:
           unknown_function()
       except (ValueError, IndexError):
-        print("ValueError or IndexError on line:", cislo_riadku)
+        print(" ")
 
   return im
-
+  
 
 def random_farba():
   farba = ""

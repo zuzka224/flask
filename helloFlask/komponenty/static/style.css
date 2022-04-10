@@ -2,11 +2,14 @@
 html {
 	scroll-behavior: smooth;
 }
-
+* {
+	background-color: rgb(1, 0, 3);
+}
+/* aby to bolo na celu obrazovku */
 #particles.js {
 	width: 100%;
 	height: 100vh;
-	background-color: aqua;
+	background-color: rgb(0, 0, 0);
 
 
 }
@@ -16,11 +19,7 @@ html {
 	height: 100vh;
 }
 
-.hlavne2{
-	display: grid;
-	grid-template-columns: 1fr,1fr;
-	grid-template-rows: 1fr, 10fr, 2fr;
-}
+/* nadpisy na hlavnej strane aby boli v strede */
 
 p {
 	color: white;
@@ -43,44 +42,20 @@ a {
 textarea {
 	background-color: rgb(175, 175, 175);
 	color: black;
-	width: 40%;
-	
-
-
-}
-::selection {
-	color: rgb(0, 0, 0);
-	background: rgb(82, 82, 82);
+	width: 400px;
+	height: 600px;
 }
 
 
 
 
-.hlavne {
-	
-	background-color: #21f3b4;
-	padding: 10px;
-}
 
-
-.ves{
-	grid-column: 1;
-	padding-left: 10%;
-	
-}   
-
-.output {
-	grid-column: 2;
-	padding-right: 10%;
-	
-}
-
+/* GLITCH TEXT */
 
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
-	background-color: black;
 }
 
 
@@ -182,7 +157,7 @@ textarea {
 
 
 
-
+/* BUTTON LETS GO */
 .btn-mid {
 	border-radius: 0px;
 	text-decoration: none;
@@ -224,19 +199,13 @@ input[type="submit"]:hover {
 	color: #1f1f1f !important;
 }
 
-
+/* oddelovacia ciara */
 hr.rounded {
 	border-top: 8px solid #bbb;
 	border-radius: 5px;
 }
 
-
-
-
-
-
-
-
+/* typewriter pismo */
 .typed {
 	display: inline;
 	color: rgb(255, 255, 255);
@@ -264,7 +233,3 @@ hr.rounded {
 		color: rgba(245, 245, 245)
 	}
 }
-
-
-
-

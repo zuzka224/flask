@@ -19,9 +19,6 @@ function handleSubmit(e) {
 		})
 }
 document.querySelector("form").addEventListener("submit", handleSubmit); // Nastavíme formulár, aby pri submit udalosti spustil našu handleSubmit funkciu
-
-
-
 let textLength = 0;
 let text = "Do textového poľa zadaj ves súbor s veľkosťou obrázka 600:400. Pre nový hárok stlač vymazať. "
 

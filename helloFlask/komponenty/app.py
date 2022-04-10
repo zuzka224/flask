@@ -8,13 +8,11 @@ from ves import *
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
-
 def random_color():
   r = randint(0, 255)
   g = randint(0, 255)
   b = randint(0, 255)
   return (r, g, b)
-
 
 def serve_pil_image(img):
 	img_io = BytesIO()
@@ -48,7 +46,6 @@ def render():
   # img = render_ves(ves, width) # tu posleme VES riadky do funkcie render_ves z projektu z prvého polroka
   img = render_ves(ves, "img")
   return serve_pil_image(img)  # vratime vyrenderovany obrazok ako jpg
-
 
 @app.route('/')
 def home():
