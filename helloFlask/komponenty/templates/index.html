@@ -5,37 +5,42 @@
 	<title>Vector Script GUI</title>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = "style.css")}}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-
-
 </head>
-	
+
 <body>
 
-<div id="particles-js">
-	<p class="text--glitch" data-text="VECTOR SCRIPT">
-		VECTOR SCRIPT
-	</p>
+	<div id="particles-js" class="particles">
+		<p class="text--glitch" data-text="VECTOR SCRIPT">
+			VECTOR SCRIPT
+		</p>
 
-	<a class="btn btn-white btn-mid" href="#hlavne">LET'S GO!</a>
-</div>
-
-<hr class="rounded">
+		<a class="btn btn-white btn-mid" href="#hlavne">LET'S GO!</a>
+	</div>
 
 
 	<div class="hlavne" id="hlavne">
 		<div id="typed" class="typed"></div>
-s	<section id="form_text" class="form_text">
-		<form method="POST" action="/render">
-			<textarea id="textarea" name="ves">VES v1.4 600 400</textarea>
-			<button id="click" class="click">Zobraziť</button>
-				<button id="click" class="click">Vymazať</button>
-			
-		</form>
-	</section>
-	<section class="output">
-		<img id="output" />
-	</section>
+		 <section id="form_text" class="form_text">
+			<form method="POST" action="/render">
+				<textarea id="textarea" name="ves" class="box">VES v1.4 600 400</textarea>
+				<button id="vykresli" class="click">Zobraziť</button>
+				<button1 id="vykresli" class="click">Vymazať</button>
+
+			</form>
+		</section>
+		<section class="output">
+			<img id="output" />
+		</section>
+
 	</div>
+
+	<div id = "zaver" class="zaver">
+
+
+	</div>
+
+
+
 
 
 
@@ -43,5 +48,16 @@ s	<section id="form_text" class="form_text">
 	<script type="text/javascript" src="{{url_for('static', filename = "particles.js")}}"></script>
 	<script type="text/javascript" src="{{url_for('static', filename = "app.js")}}"></script>
 </body>
+<hr>
+<footer>
+<section id = "pata">
+	<p>
+	<pre>
+	    <br>
+	    Zuzka Neupauerová  +  Sára Šimkuláková  +  Matej Horný  +  Megy Majerčáková = <3
+		
+	</pre>
+</section>
+</footer>
 
 </html>

@@ -257,10 +257,10 @@ def render_ves(subor, im):
         if pozicia[0] == "VES":
 
           #-------------------------------konvertovanie-----------------------------
-          width= 400
-          height = 600
-          output_width = 400
-          output_height = 600
+          width= 600
+          height = 400
+          output_width = 600
+          output_height = 400
          
     
           
