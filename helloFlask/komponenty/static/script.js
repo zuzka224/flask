@@ -42,12 +42,13 @@ document.addEventListener("DOMContentLoaded", function () {
 function clear() {
 	// When clear button is clicked
 
-	let color = "#FFFFFF";
-	let text = "VES v1.4 600 400\n"
+	let color = "#ffffff";
+	let text = document.querySelector("#ves").value
 	let columns = text.split('\n')
 	let background = columns[0] + "\n" + "CLEAR " + color;
 	document.querySelector("#ves").value = background
 	document.getElementById("vykresli").click();
+
 
 }
 
@@ -56,6 +57,15 @@ function download_image(linkElement) {
 	// When download button is clicked
 	let source = document.getElementById("output").src;
 	linkElement.href = source
+}
+
+
+function grayscale() {
+	// When grayscale button is clicked
+	let text = document.querySelector("#ves").value;
+	const sprava = "GRAYSCALE";
+	document.querySelector("#ves").value = text + "\n" + sprava;
+	document.getElementById("vykresli").click();
 }
 
 /*FOOTER */
@@ -103,3 +113,12 @@ function render(time) {
 	requestAnimationFrame(render);
 }
 requestAnimationFrame(render);
+
+
+document.querySelector("#VESform").addEventListener("submit", handleSubmit);
+document.querySelector("#clear").addEventListener("click", clear);
+document.querySelector("#output").addEventListener("click", operate);
+document.getElementById("vykresli").click();	// init picture
+remove_hidden(); 
+
+

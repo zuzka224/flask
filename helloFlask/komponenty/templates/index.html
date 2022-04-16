@@ -5,13 +5,11 @@
 	<title>Vector Script GUI</title>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = "style.css")}}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-
-
 </head>
 
 <body>
 
-	<div id="particles-js">
+	<div id="particles-js" class="particles">
 		<p class="text--glitch" data-text="VECTOR SCRIPT">
 			VECTOR SCRIPT
 		</p>
@@ -19,35 +17,45 @@
 		<a class="btn btn-white btn-mid" href="#hlavne">LET'S GO!</a>
 	</div>
 
-	<hr class="rounded">
-
 
 	<div class="hlavne" id="hlavne">
 		<div id="typed" class="typed"></div>
-		 <section id="form_text" class="form_text">
+		<section id="form_text" class="form_text">
 			<form method="POST" action="/render">
-				<textarea id="textarea" name="ves" class="box">VES v1.4 600 400</textarea>
-				<button id="vykresli" class="click">Zobraziť</button>
-
+				<textarea id="ves"  name="ves" class="box">VES v1.4 600 400</textarea>
+				<button id="vykresli" class="click">DRAW</button>
+				
 			</form>
 		</section>
 		<section class="output">
 			<img id="output" />
 		</section>
-		<footer>
-			Hello, how are you?
-		</footer>
+		<div id="download">
+		
+			<a href="#" onclick="download_image(this)" class="click click_download" id="download" download="image.png"><span><i></i>
+					DOWNLOAD</span></a>
+		</div>
+
+		
+
+	</div>
+	<form action="{{url_for('static', filename = "hint.html")}}"  class="tutorial">
+			<input class="click" type="submit" value="WANNA SEE HOW IT WORKS? CLICK HERE!">
+		</form>
+
+	<div id="zaver" class="zaver">
+
 
 	</div>
 
-	<div id="particles-js">HELLO</div>
 
 
-
-
-	<script type="text/javascript" src="{{url_for('static', filename = "script.js")}}"></script>
+<footer>
+	<section id="pata"><br> <br> <br>Zuzka Neupauerová  +  Sára Šimkuláková  +  Matej Horný  +  Megy Majerčáková = <3</section>
+</footer>
+    <script type="text/javascript" src="{{url_for('static', filename = "script.js")}}"></script>
 	<script type="text/javascript" src="{{url_for('static', filename = "particles.js")}}"></script>
 	<script type="text/javascript" src="{{url_for('static', filename = "app.js")}}"></script>
+	
 </body>
-
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vector Script GUI</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+</head>
+
+<body>
+
+    <div id="particles-js" class="particles">
+        <p class="text--glitch" data-text="VECTOR SCRIPT">
+          VECTOR SCRIPT TUTORIAL
+        </p>
+
+        <a class="btn btn-white btn-mid" href="#hlavne">LET'S SEE HOW IT WORKS!</a>
+    </div>
+
+
+    <div class="hlavne2" id="hlavne">
+       <div><h2>Príkaz CLEAR</h2>
+    Slúži na vymazanie obrazovky zadanou farbou. <br>
+    Syntax: CLEAR COLOR<br>
+    Ukážka: CLEAR #B4D455</div>
+    <div><h2>Príkaz LINE</h2>
+    Slúži na vykreslenie úsečky AB hrúky THICKNESS farbou COLOR.<br>
+    Syntax: LINE AX AY BX BY THICKNESS COLOR <br>
+    Ukážka: LINE 50 100 200 300 1 #FFFFFF</div>
+
+    <div><h2>Príkaz RECT</h2>
+        Slúži na vykreslenie obdlžníka, ktorého ľavý horný vrchol je bod A a má šírku WIDTH a
+        výškú HEIGHT a je vykreslený hrúbkou THICKNESS a farbou COLOR. <br>
+        Syntax: RECT AX AY BX BY WIDTH HEIGHT THICKNESS COLOR <br>
+        Ukážka: RECT 50 100 150 200 1 #FFFFFF</div>
+
+    <div><h2>Príkaz CIRCLE</h2>
+Slúži na vykreslenie kružnice so stredom v bode S, polomerom R a to hrúbkou THICKNESS
+a farbou COLOR.<br>
+Syntax: CIRCLE SX SY R THICKNESS COLOR<br>
+Ukážka: CIRCLE 200 100 50 1 #FFFFFF</div>
+
+    <div><h2>Príkaz FILL_CIRCLE</h2>  
+    Slúži na vykreslenie vyplneného kruhu so stredom v bode S, polomerom R a farbou
+    COLOR.<br>
+    Syntax: FILL_CIRCLE SX SY R COLOR<br>
+    Ukážka: FILL_CIRCLE 200 100 50 #FFFFFF</div>
+
+    <div> <h2>Príkaz FILL_TRIANGLE</h2> 
+    Slúži na vykreslenie vyplneného trojuholníka s vrcholmi ABC farbou COLOR.<br>
+    Syntax: FILL_TRIANGLE AX AY BX BY CX CY COLOR <br>
+    Ukážka: FILL_TRIANGLE 50 100 200 300 150 200 #AB123C</div>
+
+    <div style="padding-bottom: 5em;"> <h2>Príkaz FILL_RECT</h2>
+    Slúži na vykreslenie vyplneného obdlžníka, ktorého ľavý horný vrchol je bod A a má šírku
+    WIDTH a výškú HEIGHT a je vykreslený farbou COLOR.<br>
+    Syntax: FILL_RECT AX AY WIDTH HEIGHT COLOR<br>
+    Ukážka: FILL_RECT 50 100 150 200 #AB123C</div>
+
+    <hr>
+     
+    <h2 style="padding-top: 4em; font-size: xx-large;">UKÁŽKOVÝ PROGRAM</h2>
+    
+    <div style="display:inline-block;vertical-align:top;">
+        <img src="ukazka.png" alt="img" style="padding-right: 6em; padding-top: 4em; padding-bottom: 4em;" />
+    </div>
+    <div style="display:inline-block;">
+        <div style=" font-size:small; padding-top: 4em; padding-bottom: 4em;">
+            VES v1.4 800 800 <br>
+            CLEAR #BC8F8F <br>
+            LINE 0 0 800 800 2 #000000 <br>
+            LINE 800 0 0 800 2 #000000 <br>
+            FILL_CIRCLE 400 400 345 #FFFF84 <br>
+            FILL_CIRCLE 400 400 320 #48D1CC <br>
+            FILL_RECT 275 175 250 450 1 #B0C4DE <br>
+            FILL_CIRCLE 755 400 50 #000000 <br>
+            FILL_CIRCLE 800 400 50 #BC8F8F <br>
+            FILL_CIRCLE 45 400 50 #000000 <br>
+            FILL_CIRCLE 0 400 50 #BC8F8F <br>
+            CIRCLE 400 400 366 1 #000000 <br>
+    
+            CIRCLE 400 400 300 2 #000000 <br>
+            TRIANGLE 399 680 170 250 630 250 3 #000000 <br>
+            TRIANGLE 399 120 170 550 630 550 3 #000000 <br>
+            RECT 250 150 300 500 1 #000000 <br>
+    
+            LINE 119.8 400 680 400 2 #000000 <br>
+            LINE 310 375 490 375 1 #000000 <br>
+            LINE 310 425 490 425 1 #000000 <br>
+            LINE 350 350 450 350 1 #000000 <br>
+            LINE 350 450 450 450 1 #000000 <br>
+    
+            FILL_CIRCLE 330 552 10 #000000 <br>
+            FILL_CIRCLE 468 552 10 #000000 <br>
+            FILL_CIRCLE 330 248 10 #000000 <br>
+            FILL_CIRCLE 468 248 10 #000000 <br>
+            FILL_CIRCLE 253 400 10 #000000 <br>
+            FILL_CIRCLE 547 400 10 #000000 <br>
+    
+            FILL_CIRCLE 0 800 40 #000000 <br>
+            FILL_CIRCLE 0 0 40 #000000<br>
+            FILL_CIRCLE 800 0 40 #000000<br>
+    
+    
+            FILL_CIRCLE 123 120 12 #000000<br>
+            FILL_CIRCLE 677 120 12 #000000<br>
+            FILL_CIRCLE 123 680 12 #000000<br>
+            FILL_CIRCLE 677 680 12 #000000<br>
+    
+            FILL_CIRCLE 73 76 22 #000000<br>
+            FILL_CIRCLE 727 76 22 #000000<br>
+            FILL_CIRCLE 73 724 22 #000000<br>
+            FILL_CIRCLE 727 724 22 #000000<br>
+    
+            FILL_TRIANGLE 400 75 350 15 450 15 #000000<br>
+            FILL_TRIANGLE 400 725 350 785 450 785 #000000<br>
+        </div>
+    </div>
+
+
+    
+
+    <div id="zaver" class="zaver">
+
+
+    </div>
+
+
+    <hr>
+    <footer>
+        <section id="pata"><br> <br> <br>Zuzka Neupauerová + Sára Šimkuláková + Matej Horný + Megy Majerčáková = <3</section>
+    </footer>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js")}}"></script>
+    <script type="text/javascript" src="script.js")}}"></script>
+
+</body>
+
+</html>

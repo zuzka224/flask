@@ -314,3 +314,19 @@ def random_farba():
     farba += znak
 
   return farba
+
+def grayscale(self):
+    """
+    Grayscale filter
+    """
+
+    for x in range(self.width):
+
+      for y in range(self.height):
+
+        rgb = self.picture.getpixel((x, y))
+        hls = colorsys.rgb_to_hls(rgb[0]/255, rgb[1]/255, rgb[2]/255)
+        bw = colorsys.hls_to_rgb(hls[0], hls[1], 0)
+
+        self.picture.putpixel(
+            (x, y), (int(bw[0]*255), int(bw[1]*255), int(bw[2]*255)))

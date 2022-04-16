@@ -2,27 +2,66 @@ html {
 	scroll-behavior: smooth;
 }
 
-* {
-	background-color: rgb(1, 0, 3);
+body {
+	background-size: cover;
+	background-image: url(https://wallpapercave.com/wp/wp7558378.jpg);
 }
+
+head {
+	background-color: linear-gradient(to bottom, #000000 38%, #ffffff 100%);
+}
+
+.hlavne {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 7fr;
+	/*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+
+	background-image: url(https://wallpapercave.com/wp/wp7558378.jpg);
+
+	background-size: cover;
+
+	/*ackground-size: 400% 400%;
+	animation: gradient 15s ease infinite;*/
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 
 /* aby to bolo na celu obrazovku */
 #particles.js {
 	width: 100%;
-	height: 110vh;
-	background-color: rgb(0, 0, 0);
-
-
-}
-
-#hlavne {
-	width: 100%;
 	height: 100vh;
-	display: grid;
-	grid-template-columns: 1fr 2fr 0.5fr;
-	grid-template-rows: 1fr 7fr auto auto;
-	margin-left: 3em;
+	background-color: #000000;
+
+
 }
+
+.particles {
+	background-color: #000000;
+
+}
+
+
+
+
+
+
 
 /* nadpisy na hlavnej strane aby boli v strede */
 
@@ -32,10 +71,9 @@ p {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-
 }
 
-a {
+.btn-white {
 	color: white;
 	position: absolute;
 	top: 80%;
@@ -46,13 +84,15 @@ a {
 
 textarea {
 	/*background-color: transparent;*/
-	color: rgb(255, 255, 255);
+	color: rgb(205, 202, 202);
+	background-color: black;
 	width: 355px;
 	height: 400px;
-	border: 7px solid white ;
+	border: 3px solid rgb(0, 0, 0);
 	grid-row: 2;
 	grid-column: 1;
-	align-self: right;
+
+
 
 }
 
@@ -212,25 +252,21 @@ input[type="submit"]:hover {
 	color: #fffcfc !important;
 }
 
-/* oddelovacia ciara */
-hr.rounded {
-	border-top: 8px solid rgb(96, 96, 96);
-	border-radius: 3px;
-	width: 100%;
-}
+
 
 /* typewriter pismo */
 .typed {
-	grid-column-start: 1 ;
+	grid-column-start: 1;
 	grid-column-end: 3;
 	display: inline;
-	color: rgb(255, 255, 255);
+	color: rgb(2, 2, 2);
 	font-size: 130%;
-	text-align: left;
+	text-align: center;
 	text-transform: uppercase;
-	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	vertical-align: text-bottom;
-	margin-bottom: 5em;
+	margin-bottom: 3em;
+	margin-top: 3em;
 }
 
 .typed::after {
@@ -254,11 +290,11 @@ hr.rounded {
 
 /* ZOBRAZIŤ*/
 .click {
-	font-family: 'Times New Roman', Times, serif;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	font-size: 20px;
 	text-align: center;
 	color: rgb(0, 0, 0);
-	padding: 15px 20px;
+	padding: 3%;
 	text-transform: uppercase;
 	background-color: rgb(202, 202, 202);
 	-webkit-transition: all .4s ease-in-out;
@@ -269,29 +305,41 @@ hr.rounded {
 }
 
 .click {
-	margin-top: 2em;
-	margin-left: 5em;
-	border: solid 2px rgb(255, 255, 255);
+	text-decoration: none;
+	margin-top: 1em;
+	margin-left: 25px;
+	border: solid 2px rgb(192, 190, 190);
 	background: transparent;
-	color: rgb(252, 248, 248) !important;
+	color: rgb(255, 255, 255) !important;
 }
 
 .click:hover {
-	border: solid 2px #fff;
-	background: rgb(138, 138, 138);
-	color: #fffcfc !important;
+	border: solid 2px rgb(255, 255, 255);
+	background: rgb(255, 255, 255);
+	color: #000000 !important;
+}
+
+#download{
+	grid-row: 3;
+	grid-column: 1;
+}
+
+#vykresli{
+	grid-row: 3;
+	grid-column: 1;
+
 }
 
 .output {
-	
-	background-color: #fff ;
+
+	background-color: #fff;
 	grid-template-columns: 2;
 	grid-row: 2;
 	width: 600px;
 	height: 400px;
 	align-self: top;
 	align-self: right;
-	border-style: dotted;
+	border-style: double;
 	border-spacing: 10px;
 
 }
@@ -299,6 +347,8 @@ hr.rounded {
 .form_text {
 	grid-template-columns: 1;
 	grid-row: 2;
+	align-self: right;
+	padding-left: 10em;
 }
 
 
@@ -313,15 +363,69 @@ hr.rounded {
 
 .box textarea {
 	position: relative;
-	color: #fff;
 	font-size: 10em;
 	z-index: 10;
 }
 
 
-footer{
-	grid-column: 3;
-	grid-row: 1/5;
-	background-color: grey;
+.vykresli {
+	width: 600px;
+	height: 400px;
+}
+
+
+.pata {
+	display: flex;
+	font-size: 3vh;
+	font-size: 28px;
+	text-align: center;
+	
+}
+
+footer {
+
+	font-size: 22px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	background-color: #000000;
+	color: #fff;
+
+	position: center;
+	text-align: center;
+	height: 150px;
+}
+
+pre {
+	color: rgb(255, 255, 255);
+	position: center;
+}
+
+.vymazat {
+	background-color: #fff;
+}
+
+.tutorial{
+	background-color: #000000;
+	text-align: center;
+}
+ .click_download{
+	 align-self: right;
+ }
+
+
+
+
+/*INDEX:HTML*/
+
+.hlavne2{
+	padding-top: 3em;
+	background-color: #000000;
+	color: rgb(167, 167, 167);
+	text-align: center;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+h2{
+	color: rgb(255, 255, 255);
 }
 
