@@ -23,28 +23,26 @@
 		<section id="form_text" class="form_text">
 			<form method="POST" action="/render">
 				<textarea id="ves"  name="ves" class="box">VES v1.4 600 400</textarea>
-				<button id="vykresli" class="click">DRAW</button>
+				<button id="vykresli" class="click click2">DRAW</button> 
+				<button id="clear" class="click click2" onclick="clear()">CLEAR</button>
+				<div id="download">
 				
-			</form>
-		</section>
-		<section class="output">
-			<img id="output" />
-		</section>
-		<div id="download">
-		
-			<a href="#" onclick="download_image(this)" class="click click_download" id="download" download="image.png"><span><i></i>
-					DOWNLOAD</span></a>
-		</div>
+					<a href="#" onclick="download_image(this)" class="click click2" id="download" download="image.png"><span><i></i>DOWNLOAD</span></a>
+				</div>
+			</form>	
+			
 
+			
+		</section>
+		<section class="output loading"><img id="output" /></section>
 		
-
 	</div>
-	<form action="{{url_for('static', filename = "hint.html")}}"  class="tutorial">
-			<input class="click" type="submit" value="WANNA SEE HOW IT WORKS? CLICK HERE!">
-		</form>
+	
 
 	<div id="zaver" class="zaver">
-
+<form action="{{url_for('static', filename = "hint.html")}}"  class="tutorial">
+			<input class="click" type="submit" value="WANNA SEE HOW IT WORKS? CLICK HERE!">
+		</form>
 
 	</div>
 

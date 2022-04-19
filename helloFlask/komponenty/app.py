@@ -47,6 +47,9 @@ def render():
   img = render_ves(ves, "img")
   return serve_pil_image(img)  # vratime vyrenderovany obrazok ako jpg
 
+
+
+
 @app.route('/')
 def home():
  return render_template("index.html")

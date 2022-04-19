@@ -15,8 +15,8 @@ head {
 	width: 100%;
 	height: 100vh;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 7fr;
+	grid-template-columns: 1fr .5fr .5fr;
+	grid-template-rows: 1fr 7fr 1fr;
 	/*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
 
 	background-image: url(https://wallpapercave.com/wp/wp7558378.jpg);
@@ -41,7 +41,9 @@ head {
 	}
 }
 
-
+hr{
+	margin-top: 5em;
+}
 
 /* aby to bolo na celu obrazovku */
 #particles.js {
@@ -82,11 +84,20 @@ p {
 	text-decoration: none;
 }
 
+.btn-mid2{
+	position: absolute;
+	top: 91%;
+	left: 50%;
+	transform: translate(-50%, -80%);
+	text-decoration: none;
+
+}
+
 textarea {
 	/*background-color: transparent;*/
 	color: rgb(205, 202, 202);
 	background-color: black;
-	width: 355px;
+	width: 380px;
 	height: 400px;
 	border: 3px solid rgb(0, 0, 0);
 	grid-row: 2;
@@ -257,7 +268,7 @@ input[type="submit"]:hover {
 /* typewriter pismo */
 .typed {
 	grid-column-start: 1;
-	grid-column-end: 3;
+	grid-column-end: 4;
 	display: inline;
 	color: rgb(2, 2, 2);
 	font-size: 130%;
@@ -294,7 +305,7 @@ input[type="submit"]:hover {
 	font-size: 20px;
 	text-align: center;
 	color: rgb(0, 0, 0);
-	padding: 3%;
+	padding: 1%;
 	text-transform: uppercase;
 	background-color: rgb(202, 202, 202);
 	-webkit-transition: all .4s ease-in-out;
@@ -306,23 +317,29 @@ input[type="submit"]:hover {
 
 .click {
 	text-decoration: none;
-	margin-top: 1em;
-	margin-left: 25px;
+	margin-bottom: .8em;
+	margin-top: .8em;
 	border: solid 2px rgb(192, 190, 190);
 	background: transparent;
 	color: rgb(255, 255, 255) !important;
-}
+	margin-left: .5em;}
 
 .click:hover {
 	border: solid 2px rgb(255, 255, 255);
 	background: rgb(255, 255, 255);
 	color: #000000 !important;
 }
-
-#download{
-	grid-row: 3;
-	grid-column: 1;
+.click2{
+	background-color: black;
+	border:solid 2px #000000;
+	font-size: 25px;
+	font-weight: 50;
 }
+
+
+
+
+
 
 #vykresli{
 	grid-row: 3;
@@ -333,19 +350,18 @@ input[type="submit"]:hover {
 .output {
 
 	background-color: #fff;
-	grid-template-columns: 2;
+	grid-template-columns: 2/4;
 	grid-row: 2;
 	width: 600px;
 	height: 400px;
 	align-self: top;
 	align-self: right;
-	border-style: double;
 	border-spacing: 10px;
 
 }
 
 .form_text {
-	grid-template-columns: 1;
+	grid-column: 1;
 	grid-row: 2;
 	align-self: right;
 	padding-left: 10em;
@@ -381,6 +397,14 @@ input[type="submit"]:hover {
 	text-align: center;
 	
 }
+#download{
+	margin-top: 0em;
+	grid-column: 1;
+	grid-row: 3;
+	
+	
+}
+
 
 footer {
 
@@ -399,17 +423,15 @@ pre {
 	position: center;
 }
 
-.vymazat {
-	background-color: #fff;
-}
+
 
 .tutorial{
 	background-color: #000000;
 	text-align: center;
+	margin-top: 2em;
+	align-self: center;
 }
- .click_download{
-	 align-self: right;
- }
+
 
 
 
@@ -428,4 +450,49 @@ pre {
 h2{
 	color: rgb(255, 255, 255);
 }
+
+
+
+.loading {
+	min-width: 203px;
+	position: relative;
+	display: inline-block;
+	background: conic-gradient(from var(--angle),
+			#ee6297 0deg 90deg,
+			#EFF1F4 90deg 360deg);
+	border-radius: 3px;
+	animation: 3s rotate linear infinite;
+	color: rgba(55, 57, 76, 0.3);
+	z-index: 1;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+.loading::before {
+	content: "";
+	background: #FFFFFF;
+	border-radius: 2px;
+	/* 1px smaller */
+	position: absolute;
+	top: 3px;
+	bottom: 3px;
+	left: 3px;
+	right: 3px;
+	z-index: -1;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+
+
+
 

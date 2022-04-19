@@ -266,6 +266,8 @@ def render_ves(subor, im):
           
         
           im = Image.new("RGB", (width, height), (255, 255, 255)) 
+
+
           
 
 
@@ -330,3 +332,6 @@ def grayscale(self):
 
         self.picture.putpixel(
             (x, y), (int(bw[0]*255), int(bw[1]*255), int(bw[2]*255)))
+
+
+

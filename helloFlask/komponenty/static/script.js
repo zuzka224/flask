@@ -16,11 +16,17 @@ function handleSubmit(e) {
 		.then((res) => res.blob()) // Dostali sme binárne dáta (blob)
 		.then((image) => {
 			document.querySelector("#output").src = URL.createObjectURL(image); // Nastavíme src našeho <img> na načítaný obrázok
+			document.getElementById("output").style.visibility = "visible"
 		})
 }
+
+
+
+
+
 document.querySelector("form").addEventListener("submit", handleSubmit); // Nastavíme formulár, aby pri submit udalosti spustil našu handleSubmit funkciu
 let textLength = 0;
-let text = "Do textového poľa zadaj ves súbor s veľkosťou obrázka 600:400. Pre nový hárok stlač vymazať. "
+let text = "Do textového poľa zadaj ves súbor s rozmermi obrázka 600x400. Chceš nový hárok? Na to ti poslúži tlačidlo CLEAR."
 
 function type() {
 	let textChar = text.charAt(textLength++);
@@ -39,19 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-function clear() {
-	// When clear button is clicked
-
-	let color = "#ffffff";
-	let text = document.querySelector("#ves").value
-	let columns = text.split('\n')
-	let background = columns[0] + "\n" + "CLEAR " + color;
-	document.querySelector("#ves").value = background
-	document.getElementById("vykresli").click();
-
+function clear(e) {
+	e.preventDefault();
+	document.querySelector("textarea").value = "VES v1.6 600 400";
+	document.getElementById("output").style.visibility = "hidden";
 
 }
 
+document.querySelector("form").addEventListener("submit", handleSubmit);
+document.querySelector("#clear").addEventListener("click", clear)
 
 function download_image(linkElement) {
 	// When download button is clicked
@@ -60,13 +62,7 @@ function download_image(linkElement) {
 }
 
 
-function grayscale() {
-	// When grayscale button is clicked
-	let text = document.querySelector("#ves").value;
-	const sprava = "GRAYSCALE";
-	document.querySelector("#ves").value = text + "\n" + sprava;
-	document.getElementById("vykresli").click();
-}
+
 
 /*FOOTER */
 
@@ -116,9 +112,10 @@ requestAnimationFrame(render);
 
 
 document.querySelector("#VESform").addEventListener("submit", handleSubmit);
-document.querySelector("#clear").addEventListener("click", clear);
 document.querySelector("#output").addEventListener("click", operate);
 document.getElementById("vykresli").click();	// init picture
 remove_hidden(); 
+
+
 
 
